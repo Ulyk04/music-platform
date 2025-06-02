@@ -3,23 +3,37 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { createTheme } from '@mui/material/styles';
-import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import Home from '@mui/icons-material/Home'
+import LibraryMusic from '@mui/icons-material/LibraryMusic'
+import Search from '@mui/icons-material/Search';
+import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import { AppProvider } from '@toolpad/core/AppProvider';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
 import { DemoProvider, useDemoRouter } from '@toolpad/core/internal';
-
+import HomePage from '../component/HomePage';
+import  Grid  from '@mui/material/Grid';
+import { PageContainer } from '@toolpad/core/PageContainer';
 const NAVIGATION = [
   {
-    segment: 'dashboard',
-    title: 'Dashboard',
-    icon: <DashboardIcon />,
+    segment: 'home',
+    title: 'Home',
+    icon: <Home />,
   },
   {
-    segment: 'orders',
-    title: 'Orders',
-    icon: <ShoppingCartIcon />,
+    segment: 'library',
+    title: 'Library',
+    icon: <LibraryMusic />,
   },
+  {
+    segment:'search',
+    title:'Search',
+    icon:<Search/>,
+  },
+  {
+    segment:'favorite',
+    title:'Create Playlist',
+    icon:<FavoriteBorder/>, 
+  }
 ];
 
 const demoTheme = createTheme({
@@ -81,7 +95,17 @@ function DashboardLayoutBranding(props) {
         window={demoWindow}
       >
         <DashboardLayout>
-          <DemoPageContent pathname={router.pathname} />
+          <PageContainer>
+            <Grid>
+              <Grid>
+                {
+                  router.pathname === '/home' && (
+                    <HomePage/>
+                  )
+                }
+              </Grid>
+            </Grid>
+          </PageContainer>
         </DashboardLayout>
       </AppProvider>
      
