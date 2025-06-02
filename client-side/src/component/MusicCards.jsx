@@ -1,7 +1,7 @@
-// client-side/src/MusicCards.jsx
+
 import React from 'react';
 import { Box, Typography, Avatar } from '@mui/material';
-import PropTypes from 'prop-types'; // Не забудьте импортировать PropTypes
+import PropTypes from 'prop-types';
 
 const MusicCards = ({ icon: IconComponent, title, artist, albumArt }) => {
   return (
@@ -12,7 +12,7 @@ const MusicCards = ({ icon: IconComponent, title, artist, albumArt }) => {
         p: 1.5,
         borderBottom: '1px solid #eee',
         '&:last-child': { borderBottom: 'none' },
-        width: '100%', // Убедитесь, что занимает всю ширину
+        width: '100%',
       }}
     >
       {albumArt ? (
@@ -36,10 +36,10 @@ const MusicCards = ({ icon: IconComponent, title, artist, albumArt }) => {
 };
 
 MusicCards.propTypes = {
-  icon: PropTypes.elementType, // Иконка может быть компонентом
+  icon: PropTypes.elementType,
   title: PropTypes.string.isRequired,
   artist: PropTypes.string.isRequired,
-  albumArt: PropTypes.string, // URL обложки альбома (необязательно)
+  albumArt: PropTypes.string, 
 };
 
 export default MusicCards;

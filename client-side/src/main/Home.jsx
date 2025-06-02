@@ -13,6 +13,7 @@ import { DemoProvider, useDemoRouter } from '@toolpad/core/internal';
 import HomePage from '../component/HomePage';
 import  Grid  from '@mui/material/Grid';
 import { PageContainer } from '@toolpad/core/PageContainer';
+import Library from '../component/Library';
 const NAVIGATION = [
   {
     segment: 'home',
@@ -101,6 +102,13 @@ function DashboardLayoutBranding(props) {
                 {
                   router.pathname === '/home' && (
                     <HomePage/>
+                  )
+                }
+              </Grid>
+              <Grid>
+                {
+                  router.pathname === '/library' && (
+                    <Library/>
                   )
                 }
               </Grid>

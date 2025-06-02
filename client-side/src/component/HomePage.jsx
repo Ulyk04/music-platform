@@ -5,13 +5,32 @@ import MusicCards from './MusicCards'
 import MusicNote from '@mui/icons-material/MusicNote';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import PauseIcon from '@mui/icons-material/Pause';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const HomePage = () => {
     const [searchTerm, setSearchTerm] = useState(''); 
     const [searchResults, setSearchResults] = useState([]);
     const [playingSong, setPlayingSong] = useState(null); 
     const [isPlaying, setIsPlaying] = useState(false);
+    const [favoriteSongs, setFavoriteSongs] = useState(() =>{
+        try{
+            const storedFavorites = localStorage.getItem('favoriteSongs');
+            return storedFavorites ? JSON.parse(storedFavorites) : {};
+        }catch(error) {
+            console.error('Error parsing favorite songs from localStorage:', error);
+            return {};
+        }
+    });
     const audioRef = useRef(new Audio()); 
+
+    useEffect(() => {
+        try {
+            localStorage.setItem('favoriteSongs', JSON.stringify(favoriteSongs));
+        } catch (error) {
+            console.error("Failed to save favorite songs to localStorage", error);
+        }
+    }, [favoriteSongs]);
 
     const handleSearch = async (event) => {
         const term = event.target.value;
@@ -52,6 +71,18 @@ const HomePage = () => {
             setIsPlaying(true);
         }
     }
+
+    const handleToggleFavorite = (song) => {
+        setFavoriteSongs(prevFavorites => {
+            const newFavorites = { ...prevFavorites };
+            if (newFavorites[song.trackId]) {  
+                delete newFavorites[song.trackId];
+            } else {
+                newFavorites[song.trackId] = song;
+            }
+            return newFavorites;
+        });
+    };
 
     useEffect(() => {
         const audio = audioRef.current;
