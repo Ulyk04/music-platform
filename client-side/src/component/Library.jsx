@@ -1,20 +1,20 @@
-// client-side/src/component/Library.jsx
+
 import React, { useState, useEffect } from 'react';
 import { Box, Typography, List, ListItem, IconButton } from '@mui/material';
-import MusicCards from './MusicCards'; // Убедитесь, что путь правильный
+import MusicCards from './MusicCards'; 
 import MusicNote from '@mui/icons-material/MusicNote';
-import DeleteIcon from '@mui/icons-material/Delete'; // Иконка для удаления из библиотеки
+import DeleteIcon from '@mui/icons-material/Delete'; 
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import PauseIcon from '@mui/icons-material/Pause'; // Иконка для паузы
+import PauseIcon from '@mui/icons-material/Pause';
 
 const Library = () => {
     const [favoriteSongs, setFavoriteSongs] = useState({});
-    const [playingSong, setPlayingSong] = useState(null); // Если захотите воспроизводить в Library
-    const [isPlaying, setIsPlaying] = useState(false); // Если захотите воспроизводить в Library
-    const audioRef = React.useRef(new Audio()); // Если захотите воспроизводить в Library
+    const [playingSong, setPlayingSong] = useState(null); 
+    const [isPlaying, setIsPlaying] = useState(false); 
+    const audioRef = React.useRef(new Audio()); 
 
     useEffect(() => {
-        // Загружаем избранные песни из localStorage при монтировании компонента
+        
         const loadFavorites = () => {
             try {
                 const storedFavorites = localStorage.getItem('favoriteSongs');
@@ -27,20 +27,17 @@ const Library = () => {
 
         loadFavorites();
 
-        // Дополнительно: можно слушать изменения в localStorage, если на других вкладках
-        // window.addEventListener('storage', loadFavorites);
-        // return () => window.removeEventListener('storage', loadFavorites);
     }, []);
 
-    // Функция для удаления песни из избранного
+   
     const handleRemoveFavorite = (trackId) => {
         setFavoriteSongs(prevFavorites => {
             const newFavorites = { ...prevFavorites };
             delete newFavorites[trackId];
-            localStorage.setItem('favoriteSongs', JSON.stringify(newFavorites)); // Обновляем localStorage
+            localStorage.setItem('favoriteSongs', JSON.stringify(newFavorites)); 
             return newFavorites;
         });
-        // Если удаляемая песня была текущей играющей, останавливаем ее
+       
         if (playingSong && playingSong.trackId === trackId) {
             audioRef.current.pause();
             setIsPlaying(false);
@@ -48,7 +45,7 @@ const Library = () => {
         }
     };
 
-    // Логика воспроизведения (скопирована из HomePage, если нужна)
+  
     const handlePlay = (songToPlay) => {
         const proxiedAudioUrl = `http://localhost:5000/api/play-audio?url=${encodeURIComponent(songToPlay.previewUrl)}`;
 
@@ -92,7 +89,7 @@ const Library = () => {
     }, []);
 
 
-    const songsArray = Object.values(favoriteSongs); // Преобразуем объект в массив для map
+    const songsArray = Object.values(favoriteSongs); 
 
     return (
         <Box sx={{ p: 2 }}>
@@ -119,7 +116,7 @@ const Library = () => {
                                     <IconButton
                                         edge="end"
                                         aria-label="remove from favorites"
-                                        onClick={() => handleRemoveFavorite(song.trackId)} // Кнопка "Удалить"
+                                        onClick={() => handleRemoveFavorite(song.trackId)} 
                                         color="error"
                                     >
                                         <DeleteIcon />
