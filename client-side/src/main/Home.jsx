@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import { createTheme } from '@mui/material/styles';
 import Home from '@mui/icons-material/Home'
 import LibraryMusic from '@mui/icons-material/LibraryMusic'
-import Search from '@mui/icons-material/Search';
+import PlaylistAddCheckCircleIcon from '@mui/icons-material/PlaylistAddCheckCircle';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import { AppProvider } from '@toolpad/core/AppProvider';
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
@@ -14,6 +14,10 @@ import HomePage from '../component/HomePage';
 import  Grid  from '@mui/material/Grid';
 import { PageContainer } from '@toolpad/core/PageContainer';
 import Library from '../component/Library';
+import CreatePlaylist from '../component/CreatePlaylist';
+
+
+
 const NAVIGATION = [
   {
     segment: 'home',
@@ -26,9 +30,9 @@ const NAVIGATION = [
     icon: <LibraryMusic />,
   },
   {
-    segment:'search',
-    title:'Search',
-    icon:<Search/>,
+    segment:'playlist',
+    title:'My playlist',
+    icon:<PlaylistAddCheckCircleIcon/>,
   },
   {
     segment:'favorite',
@@ -109,6 +113,13 @@ function DashboardLayoutBranding(props) {
                 {
                   router.pathname === '/library' && (
                     <Library/>
+                  )
+                }
+              </Grid>
+              <Grid>
+                {
+                  router.pathname === '/favorite' && (
+                    <CreatePlaylist/>
                   )
                 }
               </Grid>
