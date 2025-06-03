@@ -46,9 +46,7 @@ const CreatePlaylist = () => {
 
   return (
     <Box sx={{ p: 2 }}>
-      <Typography variant="h4" gutterBottom>
-        Create a Playlist
-      </Typography>
+     
 
       <TextField
         label="Playlist Name"

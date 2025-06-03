@@ -15,7 +15,7 @@ import  Grid  from '@mui/material/Grid';
 import { PageContainer } from '@toolpad/core/PageContainer';
 import Library from '../component/Library';
 import CreatePlaylist from '../component/CreatePlaylist';
-
+import MyPlaylists from '../component/MyPlaylist';
 
 
 const NAVIGATION = [
@@ -68,7 +68,7 @@ function DemoPageContent({ pathname }) {
         textAlign: 'center',
       }}
     >
-      <Typography>Dashboard content for {pathname}</Typography>
+   
     </Box>
   );
 }
@@ -120,6 +120,13 @@ function DashboardLayoutBranding(props) {
                 {
                   router.pathname === '/favorite' && (
                     <CreatePlaylist/>
+                  )
+                }
+              </Grid>
+              <Grid>
+                {
+                  router.pathname === '/playlist' && (
+                    <MyPlaylists/>
                   )
                 }
               </Grid>

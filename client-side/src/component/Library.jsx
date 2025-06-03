@@ -93,9 +93,7 @@ const Library = () => {
 
     return (
         <Box sx={{ p: 2 }}>
-            <Typography variant="h4" component="h1" gutterBottom sx={{ mb: 4 }}>
-                My Library
-            </Typography>
+            
 
             {songsArray.length > 0 ? (
                 <List>
