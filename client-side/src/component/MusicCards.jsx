@@ -1,9 +1,10 @@
-
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import React from 'react';
-import { Box, Typography, Avatar } from '@mui/material';
+import { Box, Typography, Avatar, IconButton } from '@mui/material';
 import PropTypes from 'prop-types';
 
-const MusicCards = ({ icon: IconComponent, title, artist, albumArt }) => {
+const MusicCards = ({ icon: IconComponent, title, artist, albumArt,  isFavorite , onToggleFavorite }) => {
   return (
     <Box
       sx={{
@@ -31,6 +32,13 @@ const MusicCards = ({ icon: IconComponent, title, artist, albumArt }) => {
           {artist}
         </Typography>
       </Box>
+
+      {onToggleFavorite && (
+        <IconButton onClick={onToggleFavorite} edge="end">
+          {isFavorite ? <FavoriteIcon color="error" /> : <FavoriteBorderIcon />}
+        </IconButton>
+      )}
+
     </Box>
   );
 };
@@ -40,6 +48,8 @@ MusicCards.propTypes = {
   title: PropTypes.string.isRequired,
   artist: PropTypes.string.isRequired,
   albumArt: PropTypes.string, 
+  isFavorite: PropTypes.bool,
+  onToggleFavorite: PropTypes.func,
 };
 
 export default MusicCards;

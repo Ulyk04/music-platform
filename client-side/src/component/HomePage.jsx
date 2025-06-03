@@ -153,6 +153,8 @@ const HomePage = () => {
                     title={song.trackName}
                     artist={song.artistName}
                     albumArt={song.artworkUrl100} 
+                    isFavorite={!!favoriteSongs[song.trackId]}
+                    onToggleFavorite={() => handleToggleFavorite(song)}
                     />
                 </ListItem>
                 ))}
