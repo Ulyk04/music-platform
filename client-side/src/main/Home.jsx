@@ -45,7 +45,34 @@ const demoTheme = createTheme({
   cssVariables: {
     colorSchemeSelector: 'data-toolpad-color-scheme',
   },
-  colorSchemes: { light: true, dark: true },
+  colorSchemes: {
+    light: {
+      palette: {
+        mode: 'light',
+        background: {
+          default: '#c8e0d1', 
+          paper: '#cedbd3',
+        },
+        text: {
+          primary: '#068399',
+          secondary: '#0ecced',
+        },
+      },
+    },
+    dark: {
+      palette: {
+        mode: 'dark',
+        background: {
+          default: '#3d3a3a', 
+          paper: '#4a4443',
+        },
+        text: {
+          primary: '#ffffff',
+          secondary: '#cccccc',
+        },
+      },
+    },
+  },
   breakpoints: {
     values: {
       xs: 0,
@@ -92,7 +119,7 @@ function DashboardLayoutBranding(props) {
         navigation={NAVIGATION}
         branding={{
           logo: <img src="https://mui.com/static/logo.png" alt="MUI logo" />,
-          title: 'MUI',
+          title: 'My diss',
           homeUrl: '/toolpad/core/introduction',
         }}
         router={router}
@@ -100,7 +127,7 @@ function DashboardLayoutBranding(props) {
         window={demoWindow}
       >
         <DashboardLayout>
-          <PageContainer>
+          <PageContainer sx={{backgroundColor:'background.default' ,minHeight: '100vh' , p: 2 }} >
             <Grid>
               <Grid>
                 {
