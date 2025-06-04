@@ -144,6 +144,7 @@ Make sure you have the following installed:
 
 The repository is organized into two main directories:
 
+``` bash
 music-platform/
 ├── client-side/   # Contains the React frontend application
 │   ├── public/
@@ -154,7 +155,7 @@ music-platform/
 ├── src/
 ├── package.json
 └── ...
-
+```
 
 ## Deployment
 
