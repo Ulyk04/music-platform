@@ -65,15 +65,15 @@ Experience the **Music Platform** live:
 
 | Home Page (Light Theme) | Home Page (Dark Theme) |
 | :---------------------- | :--------------------- |
-| ![Screenshot of Home Page Light Theme](https://raw.githubusercontent.com/Ulyk04/blog-platform/main/images/home-light.jpeg) | ![Screenshot of Home Page Dark Theme]([images/home-dark.png](https://raw.githubusercontent.com/Ulyk04/blog-platform/main/images/home-dark.jpeg)) |
+| ![Screenshot of Home Page Light Theme](https://raw.githubusercontent.com/Ulyk04/music-platform/main/home-light.jpeg) | ![Screenshot of Home Page Dark Theme]([images/home-dark.png](https://raw.githubusercontent.com/Ulyk04/music-platform/main/home-dark.jpeg)) |
 
 | Library Page | Create Playlist Page |
 | :----------- | :------------------- |
-| ![Screenshot of Library Page](https://raw.githubusercontent.com/Ulyk04/blog-platform/main/images/library.jpeg) | ![Screenshot of Create Playlist Page](https://raw.githubusercontent.com/Ulyk04/blog-platform/main/images/playlist.jpeg) |
+| ![Screenshot of Library Page](https://raw.githubusercontent.com/Ulyk04/music-platform/main/library.jpeg) | ![Screenshot of Create Playlist Page](https://raw.githubusercontent.com/Ulyk04/music-platform/main/playlist.jpeg) |
 
 | Mobile View | Music Player |
 | :---------- | :----------- |
-| ![Screenshot of Mobile View](https://raw.githubusercontent.com/Ulyk04/blog-platform/main/images/mobile.jpeg) | ![Screenshot of Music Player](https://raw.githubusercontent.com/Ulyk04/blog-platform/main/images/create.jpeg) |
+| ![Screenshot of Mobile View](https://raw.githubusercontent.com/Ulyk04/music-platform/main/mobile.jpeg) | ![Screenshot of Music Player](https://raw.githubusercontent.com/Ulyk04/music-platform/main/create.jpeg) |
 
 *(Create an `images` folder in your repository root and place your screenshots there. Update the paths accordingly.)*
 
