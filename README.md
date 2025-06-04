@@ -53,7 +53,7 @@ Welcome to the **Music Platform**, a full-stack web application designed to deli
 
 Experience the **Music Platform** live:
 
-🔗 [**Visit the Live Demo**](YOUR_RENDER_DEPLOYMENT_LINK_HERE)
+🔗 [**Visit the Live Demo**](https://music-platform-frontend.onrender.com)
 
 *(Please note: The free tier backend service on Render may experience a slight delay on the first load due as it wakes up from inactivity.)*
 
@@ -65,15 +65,15 @@ Experience the **Music Platform** live:
 
 | Home Page (Light Theme) | Home Page (Dark Theme) |
 | :---------------------- | :--------------------- |
-| ![Screenshot of Home Page Light Theme](images/home-light.png) | ![Screenshot of Home Page Dark Theme](images/home-dark.png) |
+| ![Screenshot of Home Page Light Theme](https://raw.githubusercontent.com/Ulyk04/blog-platform/main/images/home-light.jpeg) | ![Screenshot of Home Page Dark Theme]([images/home-dark.png](https://raw.githubusercontent.com/Ulyk04/blog-platform/main/images/home-dark.jpeg)) |
 
 | Library Page | Create Playlist Page |
 | :----------- | :------------------- |
-| ![Screenshot of Library Page](images/library.png) | ![Screenshot of Create Playlist Page](images/create-playlist.png) |
+| ![Screenshot of Library Page](https://raw.githubusercontent.com/Ulyk04/blog-platform/main/images/library.jpeg) | ![Screenshot of Create Playlist Page](https://raw.githubusercontent.com/Ulyk04/blog-platform/main/images/playlist.jpeg) |
 
 | Mobile View | Music Player |
 | :---------- | :----------- |
-| ![Screenshot of Mobile View](images/mobile-view.png) | ![Screenshot of Music Player](images/music-player.png) |
+| ![Screenshot of Mobile View](https://raw.githubusercontent.com/Ulyk04/blog-platform/main/images/mobile.jpeg) | ![Screenshot of Music Player](https://raw.githubusercontent.com/Ulyk04/blog-platform/main/images/create.jpeg) |
 
 *(Create an `images` folder in your repository root and place your screenshots there. Update the paths accordingly.)*
 
