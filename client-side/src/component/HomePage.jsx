@@ -43,7 +43,7 @@ const HomePage = () => {
 
         try {
            
-            const response = await fetch(`http://localhost:5000/api/search?term=${encodeURIComponent(term)}`);
+            const response = await fetch(`https://music-platform-backend.onrender.com/api/search?term=${encodeURIComponent(term)}`);
             const data = await response.json();
             setSearchResults(data.results || []);
         } catch (error) {
@@ -55,7 +55,7 @@ const HomePage = () => {
    
     const handlePlay = (songToPlay) => { 
       
-        const proxiedAudioUrl = `http://localhost:5000/api/play-audio?url=${encodeURIComponent(songToPlay.previewUrl)}`;
+        const proxiedAudioUrl = `https://music-platform-backend.onrender.com/api/play-audio?url=${encodeURIComponent(songToPlay.previewUrl)}`;
 
        
         if (playingSong && playingSong.trackId === songToPlay.trackId && isPlaying) {

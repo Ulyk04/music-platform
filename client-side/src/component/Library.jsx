@@ -47,7 +47,7 @@ const Library = () => {
 
   
     const handlePlay = (songToPlay) => {
-        const proxiedAudioUrl = `http://localhost:5000/api/play-audio?url=${encodeURIComponent(songToPlay.previewUrl)}`;
+        const proxiedAudioUrl = `https://music-platform-backend.onrender.com/api/play-audio?url=${encodeURIComponent(songToPlay.previewUrl)}`;
 
         if (playingSong && playingSong.trackId === songToPlay.trackId && isPlaying) {
             audioRef.current.pause();
