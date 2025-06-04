@@ -65,8 +65,7 @@ Experience the **Music Platform** live:
 
 | Home Page (Light Theme) | Home Page (Dark Theme) |
 | :---------------------- | :--------------------- |
-| ![Screenshot of Home Page Light Theme](https://raw.githubusercontent.com/Ulyk04/music-platform/main/home-light.jpeg) |
-![Screenshot of Home Page Dark Theme]([images/home-dark.png](https://raw.githubusercontent.com/Ulyk04/music-platform/main/home-dark.jpeg) |
+| ![Screenshot of Home Page Light Theme](https://raw.githubusercontent.com/Ulyk04/music-platform/main/home-light.jpeg) |![Screenshot of Home Page Dark Theme]([images/home-dark.png](https://raw.githubusercontent.com/Ulyk04/music-platform/main/home-dark.jpeg) |
 
 | Library Page | Create Playlist Page |
 | :----------- | :------------------- |
